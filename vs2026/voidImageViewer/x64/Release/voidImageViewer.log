@@ -1,0 +1,15 @@
+﻿  config.c
+  debug.c
+  ini.c
+  localization.c
+  mem.c
+  os.c
+  safe_size.c
+  small_pool.c
+  string.c
+  utf8.c
+  viv.c
+  wchar.c
+  webp.c
+  dds.c
+  voidImageViewer.vcxproj -> M:\Backup\Code\fork\voidImageViewer\vs2026\x64\Release\voidImageViewer.exe

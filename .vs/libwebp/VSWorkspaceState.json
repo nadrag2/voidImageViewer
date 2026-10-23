@@ -1,0 +1,8 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "libwebp\\out\\build\\x64-Debug",
+      "libwebp\\out\\install\\x64-Debug"
+    ]
+  }
+}

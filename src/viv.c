@@ -256,6 +256,7 @@
 #define _VIV_ASSOCIATION_TIF				0x00000040
 #define _VIV_ASSOCIATION_TIFF				0x00000080
 #define _VIV_ASSOCIATION_WEBP				0x00000100
+#define _VIV_ASSOCIATION_DDS				0x00000200
 
 #define _VIV_ZOOM_MAX 16
 
@@ -1144,6 +1145,7 @@ const char *_viv_association_extensions[] =
 	"tif",
 	"tiff",
 	"webp",
+	"dds",
 };
 
 // registry description.
@@ -1158,6 +1160,7 @@ const localization_id_t _viv_association_description_localization_id_array[] =
 	LOCALIZATION_ID_ASSOCIATION_DESCRIPTION_TIF,
 	LOCALIZATION_ID_ASSOCIATION_DESCRIPTION_TIFF,
 	LOCALIZATION_ID_ASSOCIATION_DESCRIPTION_WEBP,
+	LOCALIZATION_ID_ASSOCIATION_DESCRIPTION_DDS,
 };
 
 const char *_viv_association_icon_locations[] = 
@@ -1165,6 +1168,7 @@ const char *_viv_association_icon_locations[] =
 	NULL,
 	NULL,
 	"%1",
+	NULL,
 	NULL,
 	NULL,
 	NULL,
@@ -1184,6 +1188,7 @@ const WORD _viv_association_dlg_item_id[] =
 	IDC_TIF,
 	IDC_TIFF,
 	IDC_WEBP,
+	IDC_DDS,
 };
 
 #define _VIV_ASSOCIATION_COUNT	(sizeof(_viv_association_extensions) / sizeof(const wchar_t *))
@@ -2364,7 +2369,7 @@ debug_printf("SWP %d %d %d %d\n",rect.left,rect.top,rect.right - rect.left,rect.
 
 				string_copy(tobuf,_viv_last_open_file ? _viv_last_open_file : L"");
 				
-				string_printf(filter_wbuf,"%s (*.bmp;*.gif;*.ico;*.jpeg;*.jpg;*.png;*.tif;*.tiff;*.webp)%c*.bmp;*.gif;*.ico;*.jpeg;*.jpg;*.png;*.tif;*.tiff;*.webp%c%s (*.*)%c*.*%c",localization_get_string(LOCALIZATION_ID_OPEN_ALL_IMAGE_FILES),0,0,localization_get_string(LOCALIZATION_ID_OPEN_ALL_FILES),0,0);
+				string_printf(filter_wbuf,"%s (*.bmp;*.dds;*.gif;*.ico;*.jpeg;*.jpg;*.png;*.tif;*.tiff;*.webp)%c*.bmp;*.dds;*.gif;*.ico;*.jpeg;*.jpg;*.png;*.tif;*.tiff;*.webp%c%s (*.*)%c*.*%c",localization_get_string(LOCALIZATION_ID_OPEN_ALL_IMAGE_FILES),0,0,localization_get_string(LOCALIZATION_ID_OPEN_ALL_FILES),0,0);
 
 				string_copy_utf8_string(title_wbuf,localization_get_string(LOCALIZATION_ID_OPEN_IMAGE_CAPTION));
 				
@@ -7995,6 +8000,7 @@ static INT_PTR CALLBACK _viv_options_general_proc(HWND hwnd,UINT msg,WPARAM wPar
 					CheckDlgButton(hwnd,IDC_TIF,check);
 					CheckDlgButton(hwnd,IDC_TIFF,check);
 					CheckDlgButton(hwnd,IDC_WEBP,check);
+					CheckDlgButton(hwnd,IDC_DDS,check);
 					
 					break;
 				}
@@ -10787,6 +10793,19 @@ static DWORD WINAPI _viv_load_image_thread_proc(void *param)
 				viv_webp.last_delay = 0;
 				viv_webp.orientation = orientation;
 				
+				if (dds_is_dds(stream))
+				{
+					// DDS reuses the webp callbacks. they take RGBA pixels.
+					if (dds_load(stream,&viv_webp,_viv_webp_info_proc,_viv_webp_frame_proc))
+					{
+						ret = 1;
+					}
+					else
+					{
+						debug_printf("dds failed to load image %S\n",_viv_load_image_filename);
+					}
+				}
+				else
 				if (webp_load(stream,&viv_webp,_viv_webp_info_proc,_viv_webp_frame_proc))
 				{
 					ret = 1;
@@ -11878,9 +11897,9 @@ static void _viv_command_line_options(void)
 //		"/everything <search> Open files from an Everything search.\n"
 //		"/random <search>\tOpen random files from an Everything search.\n"
 		"/shuffle\t\tShuffle playlist.\n"
-		"/<bmp|gif|ico|jpeg|jpg|png|tif|tiff|webp>\n"
+		"/<bmp|dds|gif|ico|jpeg|jpg|png|tif|tiff|webp>\n"
 		"\t\tInstall association.\n"
-		"/no<bmp|gif|ico|jpeg|jpg|png|tif|tiff|webp>\n"
+		"/no<bmp|dds|gif|ico|jpeg|jpg|png|tif|tiff|webp>\n"
 		"\t\tUninstall association.\n"
 		"/appdata\t\tSave settings in appdata.\n"
 		"/noappdata\tSave settings in exe path.\n"
@@ -13418,7 +13437,7 @@ static int _viv_send_everything_search(HWND hwnd,int add,int randomize,const wch
 			DWORD size;
 			wchar_t new_search[STRING_SIZE];
 			
-			string_copy_utf8_string(new_search,"ext:bmp;gif;ico;jpeg;jpg;png;tif;tiff;webp <");
+			string_copy_utf8_string(new_search,"ext:bmp;dds;gif;ico;jpeg;jpg;png;tif;tiff;webp <");
 			string_cat(new_search,search);
 			string_cat_utf8(new_search,">");
 
@@ -13881,7 +13900,7 @@ static void _viv_send_random_everything_search(void)
 		DWORD size;
 		wchar_t new_search[STRING_SIZE];
 		
-		string_copy_utf8_string(new_search,"ext:bmp;gif;ico;jpeg;jpg;png;tif;tiff;webp <");
+		string_copy_utf8_string(new_search,"ext:bmp;dds;gif;ico;jpeg;jpg;png;tif;tiff;webp <");
 		string_cat(new_search,_viv_random);
 		string_cat_utf8(new_search,">");
 

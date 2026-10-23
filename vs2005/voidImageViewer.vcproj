@@ -2023,6 +2023,18 @@
 				RelativePath="..\src\webp.h"
 				>
 			</File>
+			<File
+				RelativePath="..\src\dds.c"
+				>
+			</File>
+			<File
+				RelativePath="..\src\dds.h"
+				>
+			</File>
+			<File
+				RelativePath="..\src\bcdec.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="res"

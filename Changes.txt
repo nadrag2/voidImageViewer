@@ -1,3 +1,7 @@
+Unreleased:
+	added support for DDS images (BC1-BC7, uncompressed and float formats).
+	added DDS file association option.
+
 Monday, 12 January 2026: Version 1.0.0.15
 	fixed an issue with scrolling large images.
 	improved position offset when using numpad keys.

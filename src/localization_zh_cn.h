@@ -295,4 +295,5 @@ static const utf8_t *_localization_string_array_zh_cn[LOCALIZATION_ID_COUNT] =
 	"TIFF Image",
 	"TIFF Image",
 	"WebP Image",
+	"DDS Image",
 };

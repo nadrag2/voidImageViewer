@@ -1,0 +1,295 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenGL::GL::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenGL__GL-Debug-226e3b7651ecf9ce69c6.json",
+					"name" : "OpenGL::GL",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenGL::GLU::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenGL__GLU-Debug-b30283ae5d2bba884560.json",
+					"name" : "OpenGL::GLU",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Threads::Threads::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Threads__Threads-Debug-8450da9a78081b8e150b.json",
+					"name" : "Threads::Threads",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-1a420a46253387cc0613.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "WebP",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cwebp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cwebp-Debug-7805289e555ab50cff62.json",
+					"name" : "cwebp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dwebp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dwebp-Debug-4b000dd419e878e44857.json",
+					"name" : "dwebp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "exampleutil::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-exampleutil-Debug-a7dedd2cc8157079f184.json",
+					"name" : "exampleutil",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "extras::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-extras-Debug-b5dc71984e3f8be97d5b.json",
+					"name" : "extras",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "get_disto::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-get_disto-Debug-823f52627a1877dae701.json",
+					"name" : "get_disto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "imagedec::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-imagedec-Debug-77931c8cd54d16848870.json",
+					"name" : "imagedec",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "imageenc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-imageenc-Debug-e55dde816d24aa7f4b18.json",
+					"name" : "imageenc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "imageioutil::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-imageioutil-Debug-ab33d21d91f5da31abc4.json",
+					"name" : "imageioutil",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "img2webp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-img2webp-Debug-58a164d482a5879b7444.json",
+					"name" : "img2webp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "libwebpmux::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-libwebpmux-Debug-9b7af6dd8e30f937ba9b.json",
+					"name" : "libwebpmux",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sharpyuv::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sharpyuv-Debug-02555b75c60855ddeb58.json",
+					"name" : "sharpyuv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "webp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-webp-Debug-fab9eb0e27c861a8744c.json",
+					"name" : "webp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "webp_quality::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-webp_quality-Debug-44161789095da7429276.json",
+					"name" : "webp_quality",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "webpdecode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-webpdecode-Debug-9f2727c13d82293b8d55.json",
+					"name" : "webpdecode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "webpdecoder::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-webpdecoder-Debug-bcca4c3ea4b0111e40f1.json",
+					"name" : "webpdecoder",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "webpdemux::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-webpdemux-Debug-4cc0a5b7b73fe39f10c8.json",
+					"name" : "webpdemux",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "webpdsp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-webpdsp-Debug-3a5ea96bdaaf13b4fd22.json",
+					"name" : "webpdsp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "webpdspdecode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-webpdspdecode-Debug-3aa3a5be47830d89e1cf.json",
+					"name" : "webpdspdecode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "webpencode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-webpencode-Debug-8c5b2c236d126a187c39.json",
+					"name" : "webpencode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "webpinfo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-webpinfo-Debug-398d1c5a8c311b5bb1fa.json",
+					"name" : "webpinfo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "webpmux::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-webpmux-Debug-1083f1ddc5b19bb32c16.json",
+					"name" : "webpmux",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "webputils::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-webputils-Debug-9bcff96bab311f62cdb8.json",
+					"name" : "webputils",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "webputilsdecode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-webputilsdecode-Debug-5f3e99bec3dfb1eb6761.json",
+					"name" : "webputilsdecode",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "M:/Backup/Code/fork/voidImageViewer/libwebp/out/build/x64-Debug",
+		"source" : "M:/Backup/Code/fork/voidImageViewer/libwebp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	}
+}
